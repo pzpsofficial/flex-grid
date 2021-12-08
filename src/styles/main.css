@@ -18,6 +18,9 @@ body {
 
 h1 {
   font-size: 6rem;
+}
+
+.wrapper {
   padding: 5rem;
 }
 

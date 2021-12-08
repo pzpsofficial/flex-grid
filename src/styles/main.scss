@@ -37,7 +37,11 @@ ul {
   padding: 5rem;
 
   &__content {
-    // Tutaj będzie grid
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-column-gap: 1rem;
+    grid-row-gap: 2rem;
   }
 }
 
@@ -51,6 +55,8 @@ ul {
 }
 
 .header {
+  grid-column: 1 / 5;
+
   &__branding {
     background-color: $grey4;
     padding: 3rem;
@@ -65,6 +71,9 @@ ul {
 }
 
 .main {
+  grid-column: 1 / 4;
+  grid-row: 2 / span 2;
+
   &__box {
     background-color: $grey2;
     font-size: 1.4rem;
@@ -73,6 +82,8 @@ ul {
 }
 
 .aside {
+  grid-row: 2 / span 2;
+
   &__text {
     background-color: $grey1;
     padding: 3rem;
@@ -87,6 +98,8 @@ ul {
 }
 
 .footer {
+  grid-column: 1 / 5;
+
   &__branding {
     padding: 2rem;
     background-color: $grey1;

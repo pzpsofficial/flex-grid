@@ -56,6 +56,9 @@ ul {
 
 .header {
   grid-column: 1 / 5;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 
   &__branding {
     background-color: $grey4;
@@ -63,26 +66,38 @@ ul {
     font-size: 2rem;
   }
 
+  &__nav {
+    display: flex;
+  }
+
   &__nav-item {
     background-color: $grey1;
     padding: 1rem;
     font-size: 1.5rem;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
   }
 }
 
 .main {
   grid-column: 1 / 4;
   grid-row: 2 / span 2;
+  display: flex;
 
   &__box {
     background-color: $grey2;
     font-size: 1.4rem;
     padding: 1rem;
+    width: 30rem;
   }
 }
 
 .aside {
   grid-row: 2 / span 2;
+  display: flex;
+  flex-direction: column;
 
   &__text {
     background-color: $grey1;
@@ -94,11 +109,16 @@ ul {
     background-color: $grey4;
     padding: 1.5rem;
     font-size: 1.7rem;
+    margin-top: auto;
   }
 }
 
 .footer {
   grid-column: 1 / 5;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
 
   &__branding {
     padding: 2rem;
@@ -106,9 +126,17 @@ ul {
     font-size: 2rem;
   }
 
+  &__socials {
+    display: flex;
+  }
+
   &__socials-item {
     padding: 1rem;
     background-color: $grey4;
     font-size: 1.5rem;
+
+    &:not(:last-of-type) {
+      margin-right: 2rem;
+    }
   }
 }
